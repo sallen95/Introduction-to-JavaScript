@@ -104,11 +104,22 @@ console.log(dogFeeder(15, 1));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-// function game(rock, paper, scissors){
-//     if( = 1 && ){
+function game(rock, paper, scissors){
 
-//     }
-// }
+    if(rock = 1 && paper = 1){
+        return "You lost";
+    } else if(rock = 1 && scissors = 1){
+        return "You won";
+    } else if(paper = 1 && rock = 1){
+        return "You won";
+    } else if (paper = 1 && scissors = 1){
+        return "You lost";
+    } else if (scissors = 1 && rock = 1){
+        return "You lost";
+    } else (scissors = 1 && paper = 1){
+        return "You won";
+    }
+ }
   
 
 /************************************************************** Task 5 **************************************************************/
@@ -141,7 +152,7 @@ function annoyingSong(bottles){
         console.log("i");
     }
 }
-//  console.log(annoyingSong(i));
+ console.log(annoyingSong(i));
 
 
 /************************************************************** Task 7 **************************************************************/
