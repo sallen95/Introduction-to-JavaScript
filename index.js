@@ -104,22 +104,53 @@ console.log(dogFeeder(15, 1));
 // use math.random to determine the computers choice 
 // hint while you can complete this with only conditionals based on strings it may help to equate choice to a number 
 
-function game(rock, paper, scissors){
 
-    if(rock = 1 && paper = 1){
-        return "You lost";
-    } else if(rock = 1 && scissors = 1){
-        return "You won";
-    } else if(paper = 1 && rock = 1){
-        return "You won";
-    } else if (paper = 1 && scissors = 1){
-        return "You lost";
-    } else if (scissors = 1 && rock = 1){
-        return "You lost";
-    } else (scissors = 1 && paper = 1){
-        return "You won";
+
+function game(choice){
+    if(choice === 'rock'){
+        choice = 1;
+    }else if(choice === 'paper'){
+        choice = 2;
+    }else if(choice === 'scissors'){
+        choice = 3;
     }
- }
+
+    
+    let compChoice = Math.floor(Math.random() * 3 + 1);
+    
+    
+
+    if (choice === 1){
+        if(compChoice === 3){
+            console.log( "You won");
+        }else if(compChoice === 2){
+            console.log( "You lost");
+        }else if(compChoice === 1){
+            console.log( "It's a tie");
+        }
+    }
+    if (choice === 2){
+        if(compChoice === 3){
+            console.log( "You lost");
+        }else if(compChoice === 2){
+            console.log( "It's a tie");
+        }else if(compChoice === 1){
+            console.log( "You won");
+        }
+    }
+    if (choice === 3){
+        if(compChoice === 3){
+            console.log( "It's a tie");
+        }else if(compChoice === 2){
+            console.log( "You won");
+        }else if(compChoice === 1){
+            console.log( "You lost");
+        }    
+    }
+}
+
+    
+game('rock');
   
 
 /************************************************************** Task 5 **************************************************************/
@@ -149,7 +180,7 @@ console.log(feetConverter(2));
   
 function annoyingSong(bottles){
     for (let i = 99; i >= 0; i--){
-        console.log("i");
+        console.log(i);
     }
 }
  console.log(annoyingSong(i));
@@ -192,8 +223,4 @@ function grades(number) {
 
 /************************************************************** Stretch **************************************************************/
 //Take Rock, Paper, Sissors further
-//update your rock papers sissors code below to take a prompt from a user using the window object
-
-
-
-
+//update your rock papers sissors code below to take a prompt from a user using the window object.
